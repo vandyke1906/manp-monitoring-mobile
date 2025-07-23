@@ -6,7 +6,10 @@
       "@/*": [
         "./*"
       ]
-    }
+    },
+    "experimentalDecorators": true,
+    "target": "ESNext",
+    "module": "ESNext",
   },
   "include": [
     "**/*.ts",
