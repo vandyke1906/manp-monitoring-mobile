@@ -1,13 +1,13 @@
 // database/schema.ts
 import { appSchema, tableSchema } from '@nozbe/watermelondb';
 
-export const schema = appSchema({
+export const MonitoringReportsSchema = appSchema({
   version: 1,
   tables: [
     tableSchema({
       name: 'monitoring_reports',
       columns: [
-        { name: 'denr_personnels', type: 'string' }, // comma separated
+        { name: 'personnels', type: 'string' }, // comma separated
         { name: 'other_agency_personnels', type: 'string' }, //  JSON string: [{ name, office }]
         { name: 'monitoring_date_start', type: 'string' }, // ISO date string
         { name: 'monitoring_date_end', type: 'string', isOptional: true },
