@@ -9,7 +9,10 @@ import { ThemedView } from '@/components/ThemedView';
 import { Pressable, View } from 'react-native';
 import { Ionicons } from '@expo/vector-icons'; // or any other icon set you prefer
 
+import { useRouter } from 'expo-router';
+
 export default function HomeScreen() {
+  const router = useRouter();
   return (
     <View style={styles.container}>
       <ParallaxScrollView
@@ -47,7 +50,7 @@ export default function HomeScreen() {
       </ParallaxScrollView>
 
       <View style={styles.fabContainer}>
-        <Pressable onPress={() => console.log('FAB Pressed!')} style={styles.fab}>
+        <Pressable onPress={()  => router.push('/create-report')} style={styles.fab}>
           <Ionicons name="add" size={28} color="#fff" />
         </Pressable>
       </View>
