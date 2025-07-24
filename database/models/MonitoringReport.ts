@@ -1,8 +1,12 @@
-import { Model } from '@nozbe/watermelondb'
-import { field } from '@nozbe/watermelondb/decorators'
+import { Model } from '@nozbe/watermelondb';
+import { field } from '@nozbe/watermelondb/decorators';
 
 export default class MonitoringReport extends Model {
-  static table = 'monitoring_reports'
+  static table = 'monitoring_reports';
+  
+  // static associations = {
+  //   categories: {type: 'belongs_to', key: 'category_id'},
+  // };
 
   @field('personnels') denrPersonnel!: string
   @field('other_agency_personnels') otherAgencyPersonnels!: string
